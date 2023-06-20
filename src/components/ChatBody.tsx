@@ -16,8 +16,10 @@ export default function ChatBody({chats}:{chats:Chat[]}){
 const Message = (props:Chat) => {
     return(
        <section className="flex">
-          <img src = {props.sender.image} className="h-6 w-6 rounded-full mx-3 mt-6"/>
-          <p className="text-[18px] p-3 my-6 bg-white shadow-black shadow-md rounded-[10px]"> {props.message} </p>
+          <img src = {props.sender.image} className="h-6 w-6 rounded-full mx-2 mt-6"/>
+          <p className={`text-[18px] p-3 mx-2 my-6 ${props.sender.self ? "bg-blue-600":"bg-white" }shadow-black shadow-md rounded-[10px]`}> 
+           {props.message} 
+          </p>
        </section>
 
    )
