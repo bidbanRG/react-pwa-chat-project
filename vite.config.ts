@@ -9,7 +9,30 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
     name: "Chat App",
     short_name: "chats",
     description: "know your nearest and farthest one with chats",
-    
+    icons: [
+      {
+        src: "/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "/android-chrome-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+      {
+        src: "/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+        purpose: "apple touch icon",
+      },
+      {
+        src: "/maskable_icon.png",
+        sizes: "225x225",
+        type: "image/png",
+        purpose: "any maskable",
+      },
+    ],
     theme_color: "grey",
     background_color: "grey",
     display: "standalone",
