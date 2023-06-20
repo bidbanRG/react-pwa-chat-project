@@ -15,8 +15,8 @@ export default function(){
     <header className="h-20 w-full flex items-center mt-4 border-b-2 border-gray-200">
        <div className = 'min-h-[60px] min-w-[60px] rounded-full bg-[teal] mx-6'/>
        <div className="ml-2 w-full">
-          <p className="text-[25px]"> From <b>sldfjlsdjf</b> </p>
-          <p className="text-[25px]"> To <b> sldfjlsdjf</b> </p>
+          <p className="text-[20px]"> From <b>sldfjlsdjf</b> </p>
+          <p className="text-[20px]"> To <b> sldfjlsdjf</b> </p>
        </div>
       <Ellipsis className="h-16 w-16 cursor-pointer"/>
     </header>
