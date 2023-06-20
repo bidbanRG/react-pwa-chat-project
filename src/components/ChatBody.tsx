@@ -14,8 +14,8 @@ export default function ChatBody({chats}:{chats:Chat[]}){
 }
 
 const Message = (props:Chat) => {
-	if(props.sender.self) console.log('sdfs');
-	const bg = props.sender.self ? "bg-blue-600" : "bg-white";
+	
+	
     return(
        <section className="flex">
           <img src = {props.sender.image} className="h-6 w-6 rounded-full mx-2 mt-6"/>
