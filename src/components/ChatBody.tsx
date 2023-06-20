@@ -8,7 +8,7 @@ type Message = {
 
 export default function ChatBody({chats}:{chats:Chat[]}){
 	//https://qa.corider.in/assignment/chat?page=0
-	return <section className="w-full mt-4">
+	return <section className="w-full mt-4 mb-[60px]">
 	      {chats.map((chat,index) =>  <Message {...chat} key = {index} />)}
 	</section>
 }

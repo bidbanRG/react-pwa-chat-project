@@ -3,6 +3,7 @@ import ChatBody from "./components/ChatBody"
 import Header from "./components/Header"
 import { ChatDetails } from "./Types";
 import Input from "./components/Input";
+import ChatList from "./components/ChatList";
 
 
 function App() {
@@ -25,9 +26,10 @@ function App() {
 if(!chatDetails) return "Laoding";
   return (
      <> 
-        <Header from={chatDetails.from} to = {chatDetails.to} trip={chatDetails.name} />
+       {/* <Header from={chatDetails.from} to = {chatDetails.to} trip={chatDetails.name} />
         <ChatBody chats = {chatDetails.chats}/>
-        <Input/>
+        <Input/>*/}
+        <ChatList/>
      </> 
   )
 }
