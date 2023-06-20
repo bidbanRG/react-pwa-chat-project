@@ -23,7 +23,7 @@ const Message = (props:Chat) => {
           <p className={`text-[16px] p-3 mr-2 my-6 ${props.sender.self ? "bg-blue-500" : "bg-white"}  shadow-black shadow-md rounded-[10px] ${props.sender.self ? "text-white" : "text-black"} `}> 
            {props.message}
              <br/>
-            <span className="float-right text-gray-400 text-[16px]"> {props.time.split(" ")[1]} </span> 
+            <span className="float-right text-gray-400 text-[12px]"> {props.time.split(" ")[1]} </span> 
           </p>
        </section>
 

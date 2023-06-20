@@ -9,18 +9,20 @@ export default function({from,to,trip,src}:{from:string,to:string,trip:string,sr
          <h1 className="text-[25px] ml-3"> {trip} </h1>
        </div>
 
-       <Note className="w-6 h-6 mr-4 cursor-pointer"/>
+       <Note className="w-6 h-6 mr-4 cursor-pointer "/>
     	
     </header>
        
     <header className="h-16 w-full flex items-center mt-3 border-b-2 border-gray-200">
-     <img src = {src} className = 'h-[50px] w-[50px] rounded-full  mx-3'/>
-       <div className="ml-2 w-full">
+     <img src = {src} className = 'h-[50px] w-[50px] rounded-full  mx-3 mb-6'/>
+       <div className="ml-2 w-full mb-6">
           <p className="text-[20px]"> From <b> {from } </b> </p>
           <p className="text-[20px]"> To <b> {to} </b> </p>
        </div>
-      <Ellipsis className="h-12 w-12 cursor-pointer"/>
+      <Ellipsis className="h-12 w-12 cursor-pointer mb-6"/>
+
     </header>
+
   </div>
 
 }
