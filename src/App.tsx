@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import ChatBody from "./components/ChatBody"
-import Header from "./components/Header"
+// import ChatBody from "./components/ChatBody"
+// import Header from "./components/Header"
 import { ChatDetails } from "./Types";
-import Input from "./components/Input";
+// import Input from "./components/Input";
 import ChatList from "./components/ChatList";
 
 
@@ -23,7 +23,7 @@ function App() {
     })()
         
   },[])
-if(!chatDetails) return "Laoding";
+if(!chatDetails) return "Loading";
   return (
      <> 
        {/* <Header from={chatDetails.from} to = {chatDetails.to} trip={chatDetails.name} />
