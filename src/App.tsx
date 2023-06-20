@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import ChatBody from "./components/ChatBody"
 import Header from "./components/Header"
 import { ChatDetails } from "./Types";
+import Input from "./components/Input";
 
 
 function App() {
@@ -26,6 +27,7 @@ if(!chatDetails) return "Laoding";
      <> 
         <Header from={chatDetails.from} to = {chatDetails.to} trip={chatDetails.name} />
         <ChatBody chats = {chatDetails.chats}/>
+        <Input/>
      </> 
   )
 }
