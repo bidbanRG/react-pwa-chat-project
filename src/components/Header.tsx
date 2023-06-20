@@ -1,11 +1,11 @@
 
-export default function(){
+export default function({from,to,trip}:{from:string,to:string,trip:string}){
 
     return <>
       <header className="w-full h-16  flex justify-between items-center">
        <div className="flex items-center ml-4">
          <BackButton className="w-6 h-6"/>
-         <h1 className="text-[25px] ml-3"> Trip 1 </h1>
+         <h1 className="text-[25px] ml-3"> {trip} </h1>
        </div>
 
        <Note className="w-6 h-6 mr-4 cursor-pointer"/>
@@ -15,14 +15,16 @@ export default function(){
     <header className="h-16 w-full flex items-center mt-3 border-b-2 border-gray-200">
        <div className = 'min-h-[50px] min-w-[50px] rounded-full bg-[teal] mx-3'/>
        <div className="ml-2 w-full">
-          <p className="text-[20px]"> From <b>sldfjlsdjf</b> </p>
-          <p className="text-[20px]"> To <b> sldfjlsdjf</b> </p>
+          <p className="text-[20px]"> From <b> {from } </b> </p>
+          <p className="text-[20px]"> To <b> {to} </b> </p>
        </div>
       <Ellipsis className="h-12 w-12 cursor-pointer"/>
     </header>
   </>
 
 }
+
+
 
 
 
