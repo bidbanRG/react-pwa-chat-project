@@ -18,7 +18,9 @@ const Message = (props:Chat) => {
        <section className="flex">
           <img src = {props.sender.image} className="h-6 w-6 rounded-full mx-2 mt-6"/>
           <p className={`text-[18px] p-3 mr-2 my-6 ${props.sender.self ? "bg-blue-600":"bg-white" }shadow-black shadow-md rounded-[10px]`}> 
-           {props.message} 
+           {props.message}
+             <br/>
+            <span className="float-right text-gray-400"> {props.time.split(" ")[1]} </span> 
           </p>
        </section>
 
