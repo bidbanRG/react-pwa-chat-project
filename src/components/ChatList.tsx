@@ -1,5 +1,37 @@
-const att = new Array(20).fill(2);
+import { useEffect } from "react";
+import { ChatDetails } from "../Types";
+import { useChats } from "../ChatContext";
+import { useNavigate } from "react-router-dom";
+
+
+const call = Array.from({length:20},(_,i) => fetch(`https://qa.corider.in/assignment/chat?page=${i}`));
 export default function ChatList(){
+
+     const {
+   setChats,
+   chats
+ } = useChats();
+  
+  useEffect(() => {
+    (async () => {
+         try{
+            
+            Promise.all(call).then(res => {
+            	  return Promise.all(res.map(res => res.json()))
+            }).then(res => {
+            	 setChats(res); 
+            })
+            console.log(chats);
+           }
+         catch(e){
+           console.log(e);
+         }
+    })()
+        
+  },[])
+
+
+
 	return <main className="w-full">
 	      <header className="w-full h-18 flex items-center justify-between">
 	        <h1 className="text-[30px] ml-5"><b> Chat </b> </h1>
@@ -8,14 +40,17 @@ export default function ChatList(){
 	        <Ellipsis className="h-12 w-12 cursor-pointer"/>
 	        </section>
 	      </header>
-		 {att.map((_,index) => <ChatBar key = {index}/>)}
+		 {chats.map((data,index) => <ChatBar {...data} key = {index}/>)}
 	</main>
 }
 
-const ChatBar = () => {
-	return <section className="w-full h-[70px] flex items-center">
-	    <div className = 'min-h-[50px] min-w-[50px] rounded-full bg-[teal] mx-3'/>
-	    <h1 className="ml-6"> name </h1>
+const ChatBar = (props:ChatDetails) => {
+  const navigate = useNavigate();
+	return <section className="w-full h-[70px] flex items-center cursor-pointer border-b-2 border-gray-400"
+           onClick={() => navigate("/chat",{state:props})}
+      > 
+	    <img src = {props.chats[0].sender.image} className = 'h-[50px] w-[50px] rounded-full  mx-3'/>
+	    <h1 className="ml-3"> {props.from} </h1>
 	</section>
 	 
 }

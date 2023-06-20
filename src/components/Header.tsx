@@ -1,10 +1,11 @@
+import { useNavigate } from "react-router-dom"
 
-export default function({from,to,trip}:{from:string,to:string,trip:string}){
-
-    return <>
+export default function({from,to,trip,src}:{from:string,to:string,trip:string,src:string}){
+  const navigate = useNavigate();
+    return <div className="fixed w-full top-0 bg-white">
       <header className="w-full h-16  flex justify-between items-center">
        <div className="flex items-center ml-4">
-         <BackButton className="w-6 h-6"/>
+         <BackButton onClick = {() => navigate(-1)} className="w-6 h-6 cursor-pointer"/>
          <h1 className="text-[25px] ml-3"> {trip} </h1>
        </div>
 
@@ -13,14 +14,14 @@ export default function({from,to,trip}:{from:string,to:string,trip:string}){
     </header>
        
     <header className="h-16 w-full flex items-center mt-3 border-b-2 border-gray-200">
-       <div className = 'min-h-[50px] min-w-[50px] rounded-full bg-[teal] mx-3'/>
+     <img src = {src} className = 'h-[50px] w-[50px] rounded-full  mx-3'/>
        <div className="ml-2 w-full">
           <p className="text-[20px]"> From <b> {from } </b> </p>
           <p className="text-[20px]"> To <b> {to} </b> </p>
        </div>
       <Ellipsis className="h-12 w-12 cursor-pointer"/>
     </header>
-  </>
+  </div>
 
 }
 
@@ -28,7 +29,7 @@ export default function({from,to,trip}:{from:string,to:string,trip:string}){
 
 
 
-const BackButton:React.FC<{className:string}> = (props) => {
+const BackButton:React.FC<{className:string,onClick:() => void}> = (props) => {
 	return <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
   <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
 </svg>
