@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react"
-// import ChatBody from "./components/ChatBody"
-// import Header from "./components/Header"
+
 
  import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ChatList from "./components/ChatList";

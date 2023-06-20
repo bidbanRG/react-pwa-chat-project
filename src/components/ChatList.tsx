@@ -21,7 +21,7 @@ export default function ChatList(){
             }).then(res => {
             	 setChats(res); 
             })
-            console.log(chats);
+           
            }
          catch(e){
            console.log(e);
