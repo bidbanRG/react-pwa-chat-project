@@ -12,13 +12,13 @@ export default function(){
     	
     </header>
        
-    <header className="h-20 w-full flex items-center mt-4 border-b-2 border-gray-200">
+    <header className="h-16 w-full flex items-center mt-3 border-b-2 border-gray-200">
        <div className = 'min-h-[50px] min-w-[50px] rounded-full bg-[teal] mx-3'/>
        <div className="ml-2 w-full">
           <p className="text-[20px]"> From <b>sldfjlsdjf</b> </p>
           <p className="text-[20px]"> To <b> sldfjlsdjf</b> </p>
        </div>
-      <Ellipsis className="h-16 w-16 cursor-pointer"/>
+      <Ellipsis className="h-12 w-12 cursor-pointer"/>
     </header>
   </>
 
